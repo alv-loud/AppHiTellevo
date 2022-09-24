@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-tittle>Iniciar sesion</ion-card-tittle>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioInicio">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+      </form>
+      <ion-button fill="clear" size="small" slot="end" [routerLink]="['/recuperar']">
+        Recuperar contraseña
+      </ion-button>
+      <br>
+      <ion-button (click)="ingresar()">
+        ingresar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <center> <img width="200" height="200" src="../assets/app.png"></center>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button fill="clear" size="small" slot="end" [routerLink]="['/registro']">
+      Registrarse
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

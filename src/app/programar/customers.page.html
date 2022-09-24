@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="mycolor2">
+    <ion-title size="small" type="dark" class="ion-text-center" >Programa tu viaje de retorno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <h1></h1>
+  <h1></h1>
+  <h1></h1>
+  <ion-content>
+    <ion-slides (ionSlideDidChange)="ionSlideDidChange($event)" pager="false" [options]="slideOpts"> 
+      <ion-slide>
+        <h3>Usted retornara hacia:<ion-item>
+          <ion-input  placeholder="Ingrese ubicacion"></ion-input> 
+        </ion-item></h3>
+
+      </ion-slide>
+
+      <ion-slide>
+        <h1><ion-item>
+          <ion-label >Hora:</ion-label>
+          <ion-datetime presentation="time" ></ion-datetime>
+        </ion-item>
+      </h1>
+        
+      </ion-slide>
+      <ion-slide>
+        <h1><ion-item>
+
+          <ion-label >Fija tu costo $</ion-label>
+          <ion-input type="number" ></ion-input>
+          <ion-input></ion-input> 
+        </ion-item>  </h1>
+      </ion-slide>
+    </ion-slides>
+
+  </ion-content>
+  <ion-footer>
+    <center> <img width="200" height="200" src="../assets/app.png"></center>
+  </ion-footer>
+</ion-content>
+
+
