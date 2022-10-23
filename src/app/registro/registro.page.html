@@ -7,32 +7,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-tittle>Registro</ion-card-tittle>
-    </ion-card-header>
-    <ion-card-content>
-      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+<ion-content class="ion-padding ion-text-center">
+  <div>
+    <app-carga></app-carga>
+    <h1>Registrarse</h1>
+      <form (ngSubmit)="registrar()" [formGroup]="registrarUsuario">
         <ion-item>
-          <ion-label position="floating">Nombre de usuario</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" class="formControlName" placeholder="name@example.com"  formControlName="email" ></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password"></ion-input>
+          <ion-input type="password" class="form-control" placeholder="Password" formControlName="password"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+          <ion-label position="floating">Repetir contraseña</ion-label>
+          <ion-input type="password" class="form-control" placeholder="Repetir Password" formControlName="repetirPassword"></ion-input>
         </ion-item>
         <br>
-        <ion-button (click)="guardar()">Registrarse
+        <ion-button class="mb-3" expand='block' type="submit">Aceptar
         </ion-button>
-      </form>
-      
-      
-    </ion-card-content>
-  </ion-card>
+        <br>
+        <br>
+        <a routerLink="/inicio">volver</a>
+      </form> 
+    </div>
   <center> <img width="200" height="200" src="../assets/app.png"></center>
 </ion-content>

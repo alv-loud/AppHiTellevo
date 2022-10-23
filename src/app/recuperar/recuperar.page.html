@@ -7,21 +7,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <form></form>
-    <ion-card-header>
-      <ion-card-tittle>Ingresa tu nombre de usuario</ion-card-tittle>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-      <br>
-      <ion-button (click)="goToInicio()">Recuperar</ion-button>
-    </ion-card-content>
-  </ion-card>
-  <center> <img width="200" height="200" src="../assets/app.png"></center>
+<ion-content class="ion-padding ion-text-center">
+  <div class="logo">
+    <img src="../assets/app.png">
+  </div>
+  <h1>Recuperar</h1>
+  <br>
+  <div> 
+  <form [formGroup]="recuperarUsuario" (ngSubmit)="recuperar()">
+    <ion-item>
+      <ion-label position="floating">Correo Electronico</ion-label>
+      <ion-input type="email" required name="correo" ngModel></ion-input>
+    </ion-item>
+    <ion-button color='dark' expand='block' type="submit">
+      Recuperar</ion-button>
+      <a [routerLink]="['/inicio']" >Volver</a>
+      
+  </form>
+</div>
 
 </ion-content>
